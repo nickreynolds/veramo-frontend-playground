@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/github.io/veramo-frontend-playground/static/css/main.073c9b0a.css",
+    "main.js": "/github.io/veramo-frontend-playground/static/js/main.56b498df.js",
+    "static/js/787.67cbbff8.chunk.js": "/github.io/veramo-frontend-playground/static/js/787.67cbbff8.chunk.js",
+    "static/media/index.cjs": "/github.io/veramo-frontend-playground/static/media/index.1afc3983784dac2a221b.cjs",
+    "index.html": "/github.io/veramo-frontend-playground/index.html",
+    "main.073c9b0a.css.map": "/github.io/veramo-frontend-playground/static/css/main.073c9b0a.css.map",
+    "main.56b498df.js.map": "/github.io/veramo-frontend-playground/static/js/main.56b498df.js.map",
+    "787.67cbbff8.chunk.js.map": "/github.io/veramo-frontend-playground/static/js/787.67cbbff8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.56b498df.js"
+  ]
+}

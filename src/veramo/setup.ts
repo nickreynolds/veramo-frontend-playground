@@ -12,6 +12,7 @@ import { W3cMessageHandler } from '@veramo/credential-w3c'
 import { DIDCommMessageHandler } from '@veramo/did-comm'
 import { SdrMessageHandler } from '@veramo/selective-disclosure'
 import { KeyManagementSystem } from '@veramo/kms-local'
+import { DataStoreJson, VeramoJsonStore } from '@veramo/data-store-json'
 // import { Connection, createConnection } from 'typeorm'
 import { CredentialIssuer, ICredentialIssuer } from '@veramo/credential-w3c'
 import {
@@ -38,7 +39,11 @@ import {
 
 const INFURA_PROJECT_ID = '33aab9e0334c44b0a2e0c57c15302608'
 
-// const web3 = new Web3(Web3.givenProvider);
+
+//@ts-ignore
+let dataStore: VeramoJsonStore = { notifyUpdate: () => {
+  Promise.resolve()
+}};
 
 export function getAgent(web3:Signer):any { 
   return createAgent<IResolver & ICredentialIssuerEIP712 & IDidEthTypedData>({
@@ -109,6 +114,7 @@ export function getAgent(web3:Signer):any {
       //   suites: [new VeramoEcdsaSecp256k1RecoverySignature2020(), new VeramoEd25519Signature2018()],
       // }),
       new SelectiveDisclosure(),
+      new DataStoreJson(dataStore),
     ],
   });
 }

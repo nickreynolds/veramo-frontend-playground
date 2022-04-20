@@ -195,7 +195,7 @@ const RichTextExample = () => {
         const cred = await agent.createVerifiableCredentialEIP712({ credential, ethereumAccountId: ethereumAddress });
         console.log("cred: ", JSON.stringify(cred));
 
-        await agent.dataStoreSaveMessage({ message: cred })
+        await agent.dataStoreSaveVerifiableCredential({ verifiableCredential: cred })
       }}>Issue post</button>
     </div>
   )

@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/veramo-frontend-playground/static/css/main.073c9b0a.css",
-    "main.js": "/veramo-frontend-playground/static/js/main.629cad20.js",
+    "main.css": "/veramo-frontend-playground/static/css/main.6b58e452.css",
+    "main.js": "/veramo-frontend-playground/static/js/main.4cc5d3c7.js",
     "static/js/787.67cbbff8.chunk.js": "/veramo-frontend-playground/static/js/787.67cbbff8.chunk.js",
     "static/media/index.cjs": "/veramo-frontend-playground/static/media/index.1afc3983784dac2a221b.cjs",
     "index.html": "/veramo-frontend-playground/index.html",
-    "main.073c9b0a.css.map": "/veramo-frontend-playground/static/css/main.073c9b0a.css.map",
-    "main.629cad20.js.map": "/veramo-frontend-playground/static/js/main.629cad20.js.map",
+    "main.6b58e452.css.map": "/veramo-frontend-playground/static/css/main.6b58e452.css.map",
+    "main.4cc5d3c7.js.map": "/veramo-frontend-playground/static/js/main.4cc5d3c7.js.map",
     "787.67cbbff8.chunk.js.map": "/veramo-frontend-playground/static/js/787.67cbbff8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.629cad20.js"
+    "static/css/main.6b58e452.css",
+    "static/js/main.4cc5d3c7.js"
   ]
 }

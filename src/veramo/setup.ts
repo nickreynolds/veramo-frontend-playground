@@ -36,14 +36,11 @@ import {
   DidEthTypedData,
   IDidEthTypedData,
 } from "did-eth-typed-data";
+import { LocalStorageStore } from './localStorageStore'
 
 const INFURA_PROJECT_ID = '33aab9e0334c44b0a2e0c57c15302608'
 
-
-//@ts-ignore
-let dataStore: VeramoJsonStore = { notifyUpdate: () => {
-  Promise.resolve()
-}};
+let dataStore = LocalStorageStore.fromLocalStorage('veramo');
 
 export function getAgent(web3:Signer):any { 
   return createAgent<IResolver & ICredentialIssuerEIP712 & IDidEthTypedData>({

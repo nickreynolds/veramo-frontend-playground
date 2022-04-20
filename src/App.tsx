@@ -3,14 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";
-import CreatePost from "./components/createPost/CreatePost";
+import CreatePost from "./components/CreatePost/CreatePost";
 import { getAgent } from "./veramo/setup";
 import { ethers } from "ethers";
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route, Routes } from "react-router";
 import Head from 'next/head';
+import ViewCredentials from './components/ViewCredentials/ViewCredentials';
 
 export const EthereumAccountContext = React.createContext("");
+export const VeramoContext = React.createContext(undefined);
 
 function App() {
   const [wallet, setWallet] = useState<any>({}); //provider.getSigner();
@@ -61,16 +63,19 @@ function App() {
         />
       </Head>
     <div className="App">
-      <EthereumAccountContext.Provider value={ethereumAddress}>
-        <Header address={ethereumAddress}/>
-        <div className="InnerApp">
-          <Sidebar />
-          <Routes>
-            <Route path="/" element={<div/>}/>
-            <Route path="/veramo-frontend-playground/create-post" element={<CreatePost />}/>
-          </Routes>
-        </div>
-      </EthereumAccountContext.Provider>
+      <VeramoContext.Provider value={getAgent(wallet)}>
+        <EthereumAccountContext.Provider value={ethereumAddress}>
+          <Header address={ethereumAddress}/>
+          <div className="InnerApp">
+            <Sidebar />
+            <Routes>
+              <Route path="/" element={<div/>}/>
+              <Route path="/create-post" element={<CreatePost />}/>
+              <Route path="/view-credentials" element={<ViewCredentials />}/>
+            </Routes>
+          </div>
+        </EthereumAccountContext.Provider>
+      </VeramoContext.Provider>
     </div>
     </Router>
   )
